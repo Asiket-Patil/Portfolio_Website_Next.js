@@ -2,26 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer components {
+  .btn {
+    @apply bg-white text-black font-bold py-2 px-4 rounded inline-block mt-4 border border-gray-400 hover:bg-transparent hover:text-red-500 transition duration-200;
   }
-}
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  .inputStyle {
+    @apply outline outline-1 outline-black border-gray-400 border rounded-[5px] px-4 py-2 w-full;
   }
+  
 }
+
